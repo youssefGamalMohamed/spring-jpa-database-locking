@@ -17,6 +17,15 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
+    @Transactional
+    public Product updateProduct(String id, double newPrice) {
+        Product product = productRepository.findById(id)
+                                           .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        product.setPrice(newPrice);
+        return productRepository.save(product);  // Version check happens here
+    }
+
     // Handle Optimistic Locking Exception
     @Transactional
     public Product updateProductWithRetry(String id, double newPrice) {
