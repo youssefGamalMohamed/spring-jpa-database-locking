@@ -18,5 +18,5 @@ public class Product {
     private double price;
 
     @Version // Enables Optimistic Locking
-    private int version;
+    private Integer version;
 }
