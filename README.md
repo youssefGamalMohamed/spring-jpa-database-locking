@@ -68,7 +68,7 @@ public class ExampleEntity {
 ### Testing Optimistic Locking with JMeter
 
 1. Open JMeter.
-2. Load the provided JMeter test plan located at `/f:/projects/git-workspace/database-locking/Database Locking JPA Test Plan.jmx`.
+2. Load the provided JMeter test plan located at `Database Locking JPA Test Plan.jmx`.
 3. Start the test plan to simulate concurrent updates and observe the results.
 
 ## Contributing
